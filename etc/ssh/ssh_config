@@ -1,0 +1,21 @@
+Host *
+    Protocol 2
+    ForwardX11Trusted no
+    PasswordAuthentication no
+    StrictHostKeyChecking no
+    ServerAliveInterval 60
+    IdentitiesOnly yes
+    Compression no
+    SendEnv LANG LC_*
+    HashKnownHosts no
+
+Host host1
+    HostName 10.10.229.225
+    User root
+#   Password password
+    MACs hmac-md5
+
+Host host2
+    HostName 10.10.229.210
+    User root
+#   Password password
