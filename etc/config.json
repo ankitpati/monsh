@@ -1,0 +1,26 @@
+{
+    "ssh_config": "ssh/ssh_config",
+    "ssh_hosts": [
+        "host1",
+        "host2"
+    ],
+    "ssh_priv_keys": [
+        "ssh/id_ed25519",
+        "ssh/id_rsa"
+    ],
+    "ssh_known_hosts": "ssh/known_hosts",
+    "email_from": "Monitoring over SSH <smon@example.org>",
+    "slack_url": "https://hooks.slack.com/services/<token-goes-here>",
+    "slack_channel": "mosh",
+    "hello_msg": "Hello from SSH Host",
+    "date_format": "%s",
+    "stat_format": "%n %s %Y",
+    "log_files": {
+        "auth": "/var/log/auth.log",
+        "ub_apache": "/var/log/apache2/access.log",
+        "rh_apache": "/var/log/httpd/access.log"
+    },
+    "error_string": "ERROR",
+    "errors_critical_threshold": 10,
+    "time_skew_threshold": "100"
+}
