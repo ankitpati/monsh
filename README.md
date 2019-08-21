@@ -223,6 +223,24 @@ Core can actually read our config files and plugins.
 
 ---
 
+## Contributors
+
+If you are a new contributor, please add your name to the `CONTRIBUTORS` file
+in the following format.
+```
+Name Surname (CPANHANDLE) <email@example.org>
+```
+
+You may leave one or more fields empty, but leave the placeholders intact.
+Please note the leading spaces below.
+```
+Name Surname () <>
+ (CPANHANDLE) <email@example.org>
+ () <email@example.org>
+```
+
+---
+
 ## Corrections in this Document
 
 If you feel the guidelines here are too restrictive, or permissive, or
