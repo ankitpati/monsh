@@ -1,7 +1,5 @@
 package MonSH::Perl;
 
-our $VERSION = '1.0.0';
-
 # Modules to be Imported
 use strict;
 use warnings;
@@ -21,6 +19,8 @@ use feature qw(:5.16);
 # End of Modules to be Imported
 
 use Import::Into;
+
+our $VERSION = '1.0.0';
 
 sub import {
     my $class = shift;
@@ -49,7 +49,6 @@ sub import {
 
 sub unimport {
     croak 'Unimporting MonSH::Perl is not allowed!';
-    return;
 }
 
 1;
@@ -95,7 +94,26 @@ Aside from the features implicitly added by setting the Perl minimum version
 to 5.16, this module does not enable any additional features to Perl, only
 restrictions.
 
-Note that there is no C<no MonSH::Perl> -- you’re stuck with it!
+Note that there is no C<no MonSH::Perl>—you’re stuck with it!
+
+=head1 SUBROUTINES/METHODS
+
+The methods below aren’t meant to be called manually, and side-effects caused
+by manual calling are not considered bugs.
+
+=head2 C<import>
+
+Called automatically upon C<use MonSH::Perl>.
+
+Imports the restrictions into the calling package.
+
+See the L</DESCRIPTION> section.
+
+=head2 C<unimport>
+
+Called automatically upon C<no MonSH::Perl>.
+
+C<croak>s, because we don’t allow backing out of C<MonSH::Perl> by design!
 
 =head1 DEVELOPMENT
 
